@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ecQ-MV-S0N">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ecQ-MV-S0N">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Validator View Controller-->
@@ -17,30 +18,60 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YfI-CE-YJy">
-                                <rect key="frame" x="200" y="35" width="200" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YfI-CE-YJy">
+                                <rect key="frame" x="150" y="35" width="300" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="GJW-TW-lXp"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="didEnterValidInput:" destination="ecQ-MV-S0N" eventType="editingChanged" id="Afl-PY-UWy"/>
+                                </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="confirm email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aC6-8m-vL4">
-                                <rect key="frame" x="200" y="73" width="200" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="confirm email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aC6-8m-vL4">
+                                <rect key="frame" x="150" y="73" width="300" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="EPI-AX-vls"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="didEnterValidInput:" destination="ecQ-MV-S0N" eventType="editingChanged" id="htZ-Ba-BpV"/>
+                                </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="phone" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tEJ-pc-xDi">
-                                <rect key="frame" x="200" y="111" width="200" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="phone" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tEJ-pc-xDi">
+                                <rect key="frame" x="150" y="111" width="300" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="exT-2H-bCK"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="didEnterValidInput:" destination="ecQ-MV-S0N" eventType="editingChanged" id="PUe-NB-BYR"/>
+                                </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KcG-7x-K13">
-                                <rect key="frame" x="200" y="149" width="200" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KcG-7x-K13">
+                                <rect key="frame" x="150" y="149" width="300" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="BL4-EQ-oNG"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="didEnterValidInput:" destination="ecQ-MV-S0N" eventType="editingChanged" id="k0H-sQ-Fvu"/>
+                                </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="confirm password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="V7B-3x-PEh">
-                                <rect key="frame" x="200" y="187" width="200" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="confirm password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="V7B-3x-PEh">
+                                <rect key="frame" x="150" y="187" width="300" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="ADW-Qx-v3s"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="didEnterValidInput:" destination="ecQ-MV-S0N" eventType="editingChanged" id="7cQ-cU-hOn"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JIu-8E-4Lm">
                                 <rect key="frame" x="277" y="535" width="47" height="30"/>
@@ -48,6 +79,19 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="V7B-3x-PEh" firstAttribute="top" secondItem="KcG-7x-K13" secondAttribute="bottom" constant="8" id="2j7-YU-taq"/>
+                            <constraint firstItem="KcG-7x-K13" firstAttribute="top" secondItem="tEJ-pc-xDi" secondAttribute="bottom" constant="8" id="8Wr-HT-2yz"/>
+                            <constraint firstItem="aC6-8m-vL4" firstAttribute="top" secondItem="YfI-CE-YJy" secondAttribute="bottom" constant="8" id="8c1-Dd-iWa"/>
+                            <constraint firstItem="aC6-8m-vL4" firstAttribute="width" secondItem="YfI-CE-YJy" secondAttribute="width" id="ITo-8m-LXA"/>
+                            <constraint firstItem="tEJ-pc-xDi" firstAttribute="top" secondItem="aC6-8m-vL4" secondAttribute="bottom" constant="8" id="RUw-8L-fFk"/>
+                            <constraint firstItem="KcG-7x-K13" firstAttribute="width" secondItem="tEJ-pc-xDi" secondAttribute="width" id="Sh8-jr-JPs"/>
+                            <constraint firstItem="V7B-3x-PEh" firstAttribute="width" secondItem="KcG-7x-K13" secondAttribute="width" id="UUI-0W-1oW"/>
+                            <constraint firstItem="YfI-CE-YJy" firstAttribute="top" secondItem="CvT-dt-zkU" secondAttribute="bottom" constant="15" id="WFa-b3-yms"/>
+                            <constraint firstItem="tEJ-pc-xDi" firstAttribute="width" secondItem="aC6-8m-vL4" secondAttribute="width" id="ZRZ-d5-MAg"/>
+                            <constraint firstItem="lLl-mp-b9a" firstAttribute="top" secondItem="V7B-3x-PEh" secondAttribute="bottom" constant="383" id="gah-Ce-RNG"/>
+                            <constraint firstItem="YfI-CE-YJy" firstAttribute="width" secondItem="zbB-f3-2Tu" secondAttribute="width" multiplier="0.5" id="j8D-LB-uMG"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="emailConfirmationTextField" destination="aC6-8m-vL4" id="OmL-s6-qeF"/>
